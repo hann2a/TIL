@@ -42,3 +42,4 @@ path = []
 
 dfs(1, adj_list, visited, path)
 print(''.join(map(str, path)))
+```
