@@ -1,4 +1,4 @@
-# 1. 산점도 그리기 
+# 산점도 그리기 
 `plt.scatter()`
 ```python 
 # 1. 분석할 두 변수(특성) 선택
@@ -30,7 +30,7 @@ plt.show()
 단, student_id와 같은 식별자 열은 상관계수 계산에서 제외할 것.
 원본 df_main은 그대로 두고, 상관 계수 계산용 복사본만 별도로 담아서 사용
 
-### 데이터ㅍ,레임 복사 및 열 제거 
+### 데이터프레임 복사 및 열 제거 
 ```python 
 # 복사본 생성 후 student_id 열 제거
 df_main_copy = df_main.copy().drop(columns=['student_id'])
