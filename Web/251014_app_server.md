@@ -45,7 +45,6 @@ async def async_example(request):
 - UI 작업 
 - 대규모 I/O 작업 
 - 실시간 서비스 
-실무 감각으로 보면
 
 ### 정리 
 - 백엔드(Django, Flask 등) → 내부 연산은 동기, 외부 요청(API)은 비동기
