@@ -1,0 +1,62 @@
+대주제,중주제,소주제,세부 내용
+AI & 기계학습 방법론,선형회귀(Linear Regression) 개요,개념,입력 변수와 출력 변수 사이의 관계를 직선 형태로 근사하여 예측하는 통계적 방법이다
+AI & 기계학습 방법론,선형회귀(Linear Regression) 개요,개념,지도 학습의 가장 기초가 되는 접근법 중 하나이다
+AI & 기계학습 방법론,선형회귀(Linear Regression) 개요,목표,입력 변수와 출력 변수 간의 선형 관계를 찾고, 이를 통해 예측 및 해석을 수행하는 것
+AI & 기계학습 방법론,선형회귀(Linear Regression) 개요,학습 목표,선형회귀의 핵심 개념 이해 (입력-출력 선형 관계, 단순선형회귀)
+AI & 기계학습 방법론,선형회귀(Linear Regression) 개요,학습 목표,모델 적합: 잔차제곱합(RSS)과 최소 제곱 이해
+AI & 기계학습 방법론,선형회귀(Linear Regression) 개요,학습 목표,다중선형회귀로 확장 학습 방법 이해
+AI & 기계학습 방법론,선형회귀(Linear Regression) 개요,응용 예시,광고비와 매출 관계 분석
+AI & 기계학습 방법론,선형회귀(Linear Regression) 개요,응용 예시,고객 소득, 소비 패턴을 활용한 신용 점수 산출
+AI & 기계학습 방법론,단순선형회귀 (Simple Linear Regression),정의,한 개의 설명 변수($X$)와 하나의 반응 변수($Y$) 사이의 선형 관계(직선)를 찾는 방법
+AI & 기계학습 방법론,단순선형회귀 (Simple Linear Regression),모델 가정, $Y = \beta_0 + \beta_1 X + \epsilon$
+AI & 기계학습 방법론,단순선형회귀 (Simple Linear Regression),계수 의미 ($\beta_0$),절편: $X=0$일 때 $Y$ 값
+AI & 기계학습 방법론,단순선형회귀 (Simple Linear Regression),계수 의미 ($\beta_1$),기울기: $X$가 1단위 증가할 때 $Y$의 평균 증가량
+AI & 기계학습 방법론,단순선형회귀 (Simple Linear Regression),계수 의미 ($\epsilon$),관측 오차 (측정 오차)
+AI & 기계학습 방법론,단순선형회귀 (Simple Linear Regression),최소제곱법 (Least Squares),실제 관측값과 예측값의 차이(잔차, residual)를 제곱해 합한 값(RSS, 잔차제곱합)을 최소화하는 방법
+AI & 기계학습 방법론,단순선형회귀 (Simple Linear Regression),잔차(Residual) 정의,실제값($y_i$) - 예측값($\hat{y}_i$)의 차이 ($e_i = y_i - \hat{y}_i$)
+AI & 기계학습 방법론,단순선형회귀 (Simple Linear Regression),잔차 역할,모델이 설명하지 못한 부분이며, 모델 적합도를 판단하는 지표
+AI & 기계학습 방법론,단순선형회귀 (Simple Linear Regression),최소제곱법 해,정규방정식(closed-form)이 존재하여 공식으로 바로 계산할 수 있다
+AI & 기계학습 방법론,단순선형회귀 (Simple Linear Regression),광고 데이터 해석 ($\hat{\beta}_1$),TV 광고비를 1단위(1백만 원) 늘리면 평균 매출이 약 0.0475단위(백만 원) 증가 (약 4.72만 원 증가)
+AI & 기계학습 방법론,단순선형회귀 (Simple Linear Regression),광고 데이터 해석 ($R^2$),결정계수 $R^2=0.612$ (판매량 변동의 약 61%를 광고비로 설명 가능)
+AI & 기계학습 방법론,다중선형회귀 (Multiple Linear Regression),개념,독립 변수(설명 변수, Feature)가 여러 개 존재할 때 사용하는 회귀 분석 기법
+AI & 기계학습 방법론,다중선형회귀 (Multiple Linear Regression),모델, $Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p + \epsilon$
+AI & 기계학습 방법론,다중선형회귀 (Multiple Linear Regression),계수 해석,다른 변수를 고정한 채 특정 $X_j$가 1단위 증가할 때 $Y$가 평균적으로 $\beta_j$만큼 변화
+AI & 기계학습 방법론,다중선형회귀 (Multiple Linear Regression),추정 방법,잔차제곱합(RSS)을 최소화하는 계수 $\hat{\beta}_0, \hat{\beta}_1, \dots, \hat{\beta}_p$를 찾는다
+AI & 기계학습 방법론,다중선형회귀 (Multiple Linear Regression),추정 결과,데이터와 가장 가까운 평면(hyperplane)으로 표현된다
+AI & 기계학습 방법론,다중선형회귀 (Multiple Linear Regression),변수 추가 장점,더 많은 정보를 고려하여 설명력이 향상될 수 있다
+AI & 기계학습 방법론,다중선형회귀 (Multiple Linear Regression),변수 추가 단점,불필요한 변수를 넣으면 과적합 위험이 커지고 해석이 복잡해진다
+AI & 기계학습 방법론,다중선형회귀 (Multiple Linear Regression),성능 평가 지표,결정계수 $R^2$와 잔차표준오차 RSE가 있다
+AI & 기계학습 방법론,다중선형회귀 (Multiple Linear Regression),광고 데이터 해석 (신문),신문 광고비는 통계적으로 유의미하지 않음 (p-value = 0.8599 > 0.05)
+AI & 기계학습 방법론,선형회귀 주의사항,성능 평가,훈련 데이터만으로 계산된 성능은 과소평가 가능성이 높으므로 검증/테스트셋 데이터가 필요함
+AI & 기계학습 방법론,선형회귀 주의사항,과적합,변수가 많거나 고차항을 사용하면 과적합(overfitting) 문제가 발생할 수 있음
+AI & 기계학습 방법론,선형회귀 주의사항,다중공선성 문제,변수들 간 높은 상관관계가 발생하면 계수 해석이 어렵고 불안정한 추정이 발생한다
+AI & 기계학습 방법론,선형회귀 주의사항,인과 관계,관찰 데이터의 상관관계만으로 인과 관계를 주장해서는 안 됨
+AI & 기계학습 방법론,로지스틱 회귀 (Logistic Regression),분류(Classification) 정의,정해진 범주(카테고리) 중 하나로 지정하는 것
+AI & 기계학습 방법론,로지스틱 회귀 (Logistic Regression),분류 모델 목표,입력 $X$가 속할 범주(또는 그 확률)를 예측하는 함수 $f(x)$를 학습
+AI & 기계학습 방법론,로지스틱 회귀 (Logistic Regression),선형회귀 한계 (이진 분류),예측값이 확률 범위(0~1)를 벗어날 수 있어 부적합
+AI & 기계학습 방법론,로지스틱 회귀 (Logistic Regression),선형회귀 한계 (다중 범주 분류),정수형 코딩(1, 2, 3)이 임의의 순서와 동일한 거리를 가정하여 부적합
+AI & 기계학습 방법론,로지스틱 회귀 (Logistic Regression),모델 적합,시그모이드(Sigmoid) 함수를 활용해 0~1 범위 내 확률값 예측을 보장
+AI & 기계학습 방법론,로지스틱 회귀 (Logistic Regression),시그모이드 함수 출력,출력 범위는 (0, 1)이다
+AI & 기계학습 방법론,로지스틱 회귀 (Logistic Regression),모델식 특징,선형 회귀 모형식과 시그모이드 함수의 결합
+AI & 기계학습 방법론,로지스틱 회귀 (Logistic Regression),로짓 변환,로지스틱 모델에 로짓 변환을 수행하면 선형 모델($\beta_0 + \beta_1 x$)로 표현 가능
+AI & 기계학습 방법론,로지스틱 회귀 (Logistic Regression),우도 (Likelihood) 정의,현재 확률 함수가 데이터를 얼마나 잘 설명하는지 나타낸 지표
+AI & 기계학습 방법론,로지스틱 회귀 (Logistic Regression),최대 우도 추정 (MLE),우도(likelihood)가 최대가 되는 모수(파라미터)를 찾는 과정
+AI & 기계학습 방법론,로지스틱 회귀 (Logistic Regression),모수 추정 지표,선형회귀의 MSE 대신 우도(likelihood)를 최대화하는 방법을 사용
+AI & 기계학습 방법론,신경망 모델 (Neural Network),Hidden Unit 역할,비선형성 도입을 통해 특징 변환 역할 수행
+AI & 기계학습 방법론,신경망 모델 (Neural Network),활성화 함수,Rectified Linear Unit (ReLU)이 대표적인 예이다
+AI & 기계학습 방법론,신경망 모델 (Neural Network),Shallow 네트워크 표현,입력 구간을 나눈 조각별 선형(piecewise linear) 함수로 표현 가능하다
+AI & 기계학습 방법론,신경망 모델 (Neural Network),보편적 근사 정리,충분히 많은 Hidden unit을 가진 얕은 신경망은 임의의 연속 함수를 원하는 정확도로 근사할 수 있음
+AI & 기계학습 방법론,신경망 모델 (Neural Network),Deep 네트워크 특징,여러 개의 네트워크(층, layer)를 합성하여 계층적으로 구성됨
+AI & 기계학습 방법론,신경망 모델 (Neural Network),Deep vs Shallow,비슷한 파라미터 수로도 Deep 네트워크가 Shallow 네트워크보다 더 높은 표현력을 가질 수 있음
+AI & 기계학습 방법론,신경망 적합 (Fitting),손실 함수 (Loss function) 정의,모델의 예측이 얼마나 잘못되었는지 측정하는 함수
+AI & 기계학습 방법론,신경망 적합 (Fitting),학습의 정의,손실 함수를 최소화하는 파라미터(가중치)를 찾는 과정
+AI & 기계학습 방법론,경사 하강법 (Gradient Descent),정의,손실 함수를 줄이기 위해 기울기(gradient)를 따라 파라미터를 이동하는 방법
+AI & 기계학습 방법론,경사 하강법 (Gradient Descent),파라미터 업데이트,기울기(미분값)의 반대 방향으로 이동 (손실 최소화)
+AI & 기계학습 방법론,경사 하강법 (Gradient Descent),Convex 문제,전역(global) 최소점이 유일하여 최적화가 쉬움
+AI & 기계학습 방법론,경사 하강법 (Gradient Descent),Non-Convex 문제,여러 개의 지역(local) 최소점 또는 새들점(saddle point)이 있어 최적화가 어려움
+AI & 기계학습 방법론,경사 하강법 (Gradient Descent),단점,매 스텝마다 전체 데이터에 대한 미분값을 계산하므로 계산량이 많음
+AI & 기계학습 방법론,확률적 경사 하강법 (SGD),개념,전체 데이터 대신 무작위로 샘플된 데이터(batch)를 사용하여 기울기를 계산
+AI & 기계학습 방법론,확률적 경사 하강법 (SGD),장점,전체 데이터 계산 대비 계산량이 적어 큰 데이터셋에서 효율적임
+AI & 기계학습 방법론,확률적 경사 하강법 (SGD),특성,Local 최소점에서 빠질 위험이 상대적으로 적음 (무작위성 때문에)
+AI & 기계학습 방법론,역전파 (Backpropagation),개념,네트워크 파라미터의 미분값을 구하는 과정
+AI & 기계학습 방법론,역전파 (Backpropagation),원리,합성 함수의 미분법인 연쇄 법칙(Chain Rule)을 사용하여 계산

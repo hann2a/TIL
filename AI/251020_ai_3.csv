@@ -1,0 +1,50 @@
+대분류,중분류,세부 내용
+워드 임베딩과 순환신경망 기반 모델,"워드 임베딩: 원-핫 인코딩",단어를 원자적(쪼갤 수 없는) 기호로 취급하는 표현 방식 [1, 2].
+워드 임베딩과 순환신경망 기반 모델,"워드 임베딩: 원-핫 인코딩",문제점 1: 차원의 저주 (Curse of Dimensionality) – 고차원의 희소(sparse) 벡터, 메모리 소모, 데이터 활용 어려움 [3, 4].
+워드 임베딩과 순환신경망 기반 모델,"워드 임베딩: 원-핫 인코딩",문제점 2: 의미적 정보 부족 – 비슷한 단어도 유사한 벡터로 표현되지 않아 유사도 측정 불가 [3-6].
+워드 임베딩과 순환신경망 기반 모델,"워드 임베딩: 워드 임베딩 (Word Embedding)",단어들 사이의 의미적 관계를 포착할 수 있는 밀집(dense)되고 연속적/분산적(distributed) 벡터 표현 방법 [7, 8].
+워드 임베딩과 순환신경망 기반 모델,"워드 임베딩: 워드 임베딩 (Word Embedding)",아이디어: 단어를 주변 단어들로 표현하여 의미를 담음 (distributional hypothesis) [9, 10].
+워드 임베딩과 순환신경망 기반 모델,"워드 임베딩: Word2Vec (대표 기법)",중심 단어를 통해 주변 단어를 예측하는 Skip-grams (SG) 방식 존재 [11-14].
+워드 임베딩과 순환신경망 기반 모델,"워드 임베딩: Word2Vec (대표 기법)",주변 단어들을 통해 중심 단어를 예측하는 Continuous Bag of Words (CBOW) 방식 존재 [11, 12, 15, 16].
+워드 임베딩과 순환신경망 기반 모델,"순차적 데이터",입력되는 순서와 순서를 통해 입력되는 데이터들 사이의 관계가 중요한 데이터 (예: 오디오, 텍스트, 비디오) [17, 18].
+워드 임베딩과 순환신경망 기반 모델,"순차적 데이터",특징 1: 순서가 중요함 (데이터의 순서가 바뀌면 의미가 달라짐) [19, 20].
+워드 임베딩과 순환신경망 기반 모델,"순차적 데이터",특징 2: 장기 의존성 (Long-term dependency) – 멀리 떨어진 과거 정보가 현재/미래에 영향을 줌 [19, 20].
+워드 임베딩과 순환신경망 기반 모델,"순차적 데이터",처리 모델: Recurrent Neural Network (RNN), Long-Short Term Memory (LSTM), Transformer 등이 필요함 [21, 22].
+워드 임베딩과 순환신경망 기반 모델,"RNN (순환 신경망)",가변 길이의 입력을 받고 이전 입력을 기억할 수 있어 순차적 데이터 처리에 적합한 아키텍처 [23, 24].
+워드 임베딩과 순환신경망 기반 모델,"RNN (순환 신경망)",이전 시점의 정보를 담는 hidden state를 가지며, 매 시점 recurrence 수식을 적용해 업데이트함 [25, 26].
+워드 임베딩과 순환신경망 기반 모델,"RNN (순환 신경망)",한계: 기울기 소실 (vanishing gradient) 문제 – 역전파 시 기울기가 0에 가까워져 장기 의존성 학습이 어려움 [27, 28].
+워드 임베딩과 순환신경망 기반 모델,"LSTM (Long-Short Term Memory)",기울기 소실 문제를 해결하기 위해 1997년에 제안된 RNN의 한 종류 [29, 30].
+워드 임베딩과 순환신경망 기반 모델,"LSTM (Long-Short Term Memory)",**cell state**($C_t$)를 통해 장기 정보(long-term information)를 저장함 [29, 30].
+워드 임베딩과 순환신경망 기반 모델,"LSTM (Long-Short Term Memory)",3가지 게이트 (Forget, Input, Output gate)를 통해 cell state의 정보를 읽고, 지우고, 기록함 [31, 32].
+자연어 생성 모델,"언어 모델",인간의 두뇌가 자연어를 생성하는 능력을 모방한 모델이며, 단어 시퀀스 전체에 확률을 부여하여 문장의 자연스러움을 측정 [33, 34].
+자연어 생성 모델,"Seq2Seq (Sequence to Sequence)",입력과 출력 길이가 다른 시퀀스 간의 매핑을 처리하기 위한 모델 [35, 36].
+자연어 생성 모델,"Seq2Seq (Sequence to Sequence)",Encoder (입력 문장을 인코딩)와 Decoder (인코딩된 정보를 참조하여 출력 문장 생성)로 구성됨 [37, 38].
+자연어 생성 모델,"Seq2Seq (Sequence to Sequence)",학습 방법: Teacher Forcing을 통해 예측된 단어 대신 정답 단어를 디코더 입력으로 강제하여 학습 안정성을 높일 수 있음 [39, 40].
+자연어 생성 모델,"Seq2Seq (Sequence to Sequence)",한계: Bottleneck problem – Encoder가 입력 문장 전체를 하나의 고정 길이 벡터로 요약하여 정보 손실이 발생할 수 있음 [41, 42].
+자연어 생성 모델,"Attention Mechanism (어텐션)",디코더가 단어를 생성할 때 인코더의 전체 hidden state 중 필요한 부분을 직접 참조할 수 있도록 하는 메커니즘 [43, 44].
+자연어 생성 모델,"Attention Mechanism (어텐션)",효과: Bottleneck problem 완화, NMT 성능 향상, Vanishing Gradient Problem 완화, 모델의 해석 가능성 및 정렬(Alignment) 제공 [45-48].
+자연어 생성 모델,"Attention Mechanism (어텐션)",작동 원리: Query(Decoder hidden state)와 Values(Encoder hidden states) 간의 유사도를 계산하여 확률 분포를 얻고 이를 이용해 가중합하여 context vector를 생성함 [49, 50].
+Transformer,"Self-Attention",RNN의 장기 의존성 학습 및 병렬화 문제를 해결하기 위해 도입된, 한 문장 내부에서 단어 간 관계를 파악하는 메커니즘 [51-56].
+Transformer,"Self-Attention",장점: 순차적으로 처리할 연산 수가 시퀀스 길이에 증가하지 않으며, 모든 단어가 각 층에서 직접 상호작용 가능 [55, 56].
+Transformer,"Self-Attention",핵심 요소: 각 단어에 대해 Query, Key, Value 벡터를 정의하고 이들 간의 유사도를 계산하여 출력(output)을 가중합함 [57-60].
+Transformer,"Self-Attention 한계 해결",순서 정보 부재 문제 해결: Positional Encoding 기법 사용 [61-64].
+Transformer,"Self-Attention 한계 해결",비선형성 부족 문제 해결: Feed-Forward Network를 추가하여 깊고 비선형적인 표현으로 확장 [65, 66].
+Transformer,"Self-Attention 한계 해결",미래 참조 문제 해결: Masked Self-Attention을 적용하여 미래 단어에 해당하는 항목을 반영하지 않도록 함 [67, 68].
+Transformer,"Transformer 아키텍처",2017년 Google의 "Attention Is All You Need" 논문에서 제안된 모델로, Self-Attention을 핵심 메커니즘으로 사용함 [69, 70].
+Transformer,"Transformer 아키텍처",구조: Encoder-Decoder 구조로 설계됨 [71, 72].
+Transformer,"Transformer 아키텍처",구성 요소: Multi-Headed Attention (다양한 관점에서 정보 파악) 및 Scaled Dot Product (내적 값의 스케일을 조정하여 학습 안정화) 사용 [73-76].
+Transformer,"Transformer 아키텍처",결과: Neural Machine Translation (NMT) task에서 최고 성능을 달성했으며, 학습 효율성도 높음 [77, 78].
+사전 학습 기반 언어 모델,"사전 학습 (Pretraining)",대규모 데이터셋을 이용해 모델의 일반적인 특징과 표현을 비지도 학습 방식으로 학습하여 언어 패턴, 지식, 문맥 이해 능력을 습득하는 과정 [79, 80].
+사전 학습 기반 언어 모델,"사전 학습 (Pretraining)",패러다임: Pretrain을 통해 언어 패턴을 학습한 후, Fine-tuning을 통해 NLP 애플리케이션 성능을 향상시킴 [81, 82].
+사전 학습 기반 언어 모델,"Encoder 모델 (BERT)",**양방향 문맥**을 활용할 수 있으며, 입력 문맥 이해를 잘 하도록 설계됨 [83-86].
+사전 학습 기반 언어 모델,"Encoder 모델 (BERT)",2018년 Google 공개, Masked Language Model (MLM)과 Next Sentence Prediction (NSP) 방식으로 사전 학습을 수행함 [87-92].
+사전 학습 기반 언어 모델,"Encoder 모델 (BERT)",한계: 시퀀스 생성 태스크(기계 번역, 텍스트 생성)에는 부적합하며, 생성 태스크에는 디코더 기반 모델이 주로 사용됨 [93, 94].
+사전 학습 기반 언어 모델,"Encoder-Decoder 모델 (T5)",Encoder와 Decoder의 장점을 모두 결합한 구조 [95, 96].
+사전 학습 기반 언어 모델,"Encoder-Decoder 모델 (T5)",2019년 Google Research 공개, 모든 태스크를 Text-to-Text 포맷으로 변환하여 학습 [97, 98].
+사전 학습 기반 언어 모델,"Decoder 모델 (GPT)",**전형적인 언어 모델 구조**로, 문장 생성에 유용하며 단방향 문맥만 활용함 (미래 단어 참조 불가) [99-102].
+사전 학습 기반 언어 모델,"Decoder 모델 (GPT)",GPT-1: 2018년 OpenAI 공개, Autoregressive LM (왼쪽 → 오른쪽 단어 예측) 방식으로 사전 학습 [103, 104].
+사전 학습 기반 언어 모델,"Decoder 모델 (GPT)",GPT-2: 2019년 GPT-1의 확장 버전, 더 많은 데이터와 큰 parameter size로 자연스러운 텍스트 생성 능력을 보여줌 [105, 106].
+사전 학습 기반 언어 모델,"In-Context Learning (ICL) (GPT-3)",GPT-3 (2020년 공개)는 별도의 fine-tuning 없이 컨텍스트 안의 예시만 보고도 새로운 태스크를 수행할 수 있게 된 능력 [107, 108].
+사전 학습 기반 언어 모델,"In-Context Learning (ICL) (GPT-3)",특징: 모델의 parameter size가 커질수록, shot(예시)의 수가 많을수록 성능이 강력하게 나타남 (Zero-shot < One-shot < Few-shot) [109-112].
+사전 학습 기반 언어 모델,"In-Context Learning (ICL) (GPT-3)",Chain-of-Thought (CoT) prompting: 모델이 논리적인 사고 단계를 거쳐 최종 답을 도출하도록 유도하는 프롬프팅 기법 [113-116].
+사전 학습 기반 언어 모델,"In-Context Learning (ICL) (GPT-3)",Zero-Shot CoT prompting: few-shot 예시 없이, "Let's think step by step" 문구를 추가하여 모델이 스스로 추론 단계를 생성하도록 유도 [117, 118].
